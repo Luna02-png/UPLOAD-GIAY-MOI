@@ -49,14 +49,14 @@ Show job state, last successful row, next row, and errors.
 Batch configuration
 Selected values in `CONFIG`:
 Setting	Value
-`SEO_BATCH_SIZE`	40 rows
-`SEO_MAX_BATCHES_PER_RUN`	4
-`SEO_SAFE_RUNTIME_MS`	25,000 ms
-`SELECTED_SEO_BATCH_SIZE`	20 rows
-`SELECTED_SEO_MAX_BATCHES_PER_RUN`	1
-`SEO_CONTINUE_AFTER_MS`	60,000 ms
-`SEO_WATCHDOG_AFTER_MS`	90,000 ms
-`SEO_CACHE_SECONDS`	21,600 seconds (6 hours)
+`SEO\_BATCH\_SIZE`	40 rows
+`SEO\_MAX\_BATCHES\_PER\_RUN`	4
+`SEO\_SAFE\_RUNTIME\_MS`	25,000 ms
+`SELECTED\_SEO\_BATCH\_SIZE`	20 rows
+`SELECTED\_SEO\_MAX\_BATCHES\_PER\_RUN`	1
+`SEO\_CONTINUE\_AFTER\_MS`	60,000 ms
+`SEO\_WATCHDOG\_AFTER\_MS`	90,000 ms
+`SEO\_CACHE\_SECONDS`	21,600 seconds (6 hours)
 These are configured delays, not guarantees of exact execution time.
 Installation
 Open the target Google Sheet and select Extensions → Apps Script.
@@ -76,7 +76,7 @@ This file's `onOpen()` menu references functions not defined in this file, inclu
 `dateStatusUpdateSelectedRqOnly`
 `dateStatusUpdateSelectedCheckOnly`
 `reloadRequestTechCheckedTime`
-These need to be supplied by other `.gs` files in the same Apps Script project. The SEO `onEdit(e)` explicitly delegates Request TECH and Final Check event handling to the separate `dateStatusOnEdit_` installable trigger.
+These need to be supplied by other `.gs` files in the same Apps Script project. The SEO `onEdit(e)` explicitly delegates Request TECH and Final Check event handling to the separate `dateStatusOnEdit\_` installable trigger.
 Caution: Do not assume that the entire menu is operational when only this one file has been installed. Some date-related helper functions remain in the source, but the menu routes to external handlers.
 Troubleshooting
 Missing header error: Check the exact header names in row 1 of `INPUT`.
